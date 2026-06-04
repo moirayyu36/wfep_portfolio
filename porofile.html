@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile & Portfolio</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --text: #1f2937;
+            --text-light: #4b5563;
+            --bg: #f3f4f6;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* --- Personal Name Card --- */
+        .name-card {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.15);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .name-card h1 {
+            margin: 0 0 5px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .name-card p.tagline {
+            margin: 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 0.95rem;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+
+        /* --- Section Layouts --- */
+        .section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h2 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--bg);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* --- Grid for Projects & Startups --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fafafa;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            color: #111827;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 600px) {
+            .name-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-info {
+                text-align: center;
+            }
+            .contact-info p {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="name-card">
+        <div>
+            <h1>Alex Morgan</h1>
+            <p class="tagline">Full-Stack Developer & Tech Entrepreneur</p>
+        </div>
+        <div class="contact-info">
+            <p>📧 alex.morgan@email.com</p>
+            <p>🌐 alexmorgan.dev</p>
+            <p>📍 San Francisco, CA</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>About Me</h2>
+        <p>Hi there! I am a software engineer and builder driven by the challenge of transforming complex problems into clean, accessible digital experiences. With a background in computer science and product design, I enjoy working at the intersection of technical architecture and user experience. When I'm not coding, you can find me exploring emerging open-source tech or hunting down the city's best espresso.</p>
+    </div>
+
+    <div class="section">
+        <h2>Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🚀 DevPulse</h3>
+                <p>A lightweight, real-time analytics dashboard for GitHub repositories tracking contribution velocities and code health metrics.</p>
+            </div>
+            <div class="card">
+                <h3>🎨 EcoSwipe</h3>
+                <p>A mobile-first application designed to help users calculate and offset their daily carbon footprint using localized carbon data.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Startups</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>💡 Novus AI (Co-Founder)</h3>
+                <p>An automated compliance platform leveraging fine-tuned local LLMs to streamline document reviews for small businesses.</p>
+            </div>
+            <div class="card">
+                <h3>🌱 HabitGrow</h3>
+                <p>A B2B SaaS micro-habit platform focused on reducing corporate burnout and improving daily team engagement.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
